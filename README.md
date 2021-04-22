@@ -37,6 +37,26 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 
 5. Modifique la coleción de POSTMAN con NEWMAN de tal forma que pueda enviar 10 peticiones concurrentes. Verifique los resultados y presente un informe.
 
+![](images/Imagen1.PNG)
+
+![](images/Imagen2.PNG)
+
+![](images/Imagen3.PNG)
+
+![](images/Imagen4.PNG)
+
+![](images/Imagen5.PNG)
+
+![](images/Imagen6.PNG)
+
+![](images/Imagen7.PNG)
+
+![](images/Imagen8.PNG)
+
+![](images/Imagen9.PNG)
+
+![](images/Imagen10.PNG)
+
 6. Cree una nueva Function que resuleva el problema de Fibonacci pero esta vez utilice un enfoque recursivo con memoization. Pruebe la función varias veces, después no haga nada por al menos 5 minutos. Pruebe la función de nuevo con los valores anteriores. ¿Cuál es el comportamiento?.
 
 **Preguntas**
