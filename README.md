@@ -95,10 +95,12 @@ Código memorizado
 
   Azure Functions tiene tres planes de servicio diferentes:
   * Plan de consumo: Cuando se usa el plan de consumo, las instancias del host de Azure Functions se agregan y quitan de forma dinámica según el número de eventos entrantes. Este plan sin servidor se escala automáticamente y solo se le cobra por los recursos de proceso cuando se ejecutan las funciones. En un plan de consumo, se agota el tiempo de espera de una ejecución.  
+    
     **Ventajas:**
       * Pague solo cuando se ejecutan las funciones.
       * Escale horizontalmente de forma automática, incluso durante períodos de gran carga.
   * Plan Premium: Cuando se usa el plan Prémium, las instancias del host de Azure Functions se agregan y quitan según el número de eventos entrantes al igual que con el plan de consumo.  
+    
     **Ventajas:**
       * Constancias permanentemente semiactivas para evitar cualquier inicio en frío
       * Conectividad de red virtual
@@ -108,10 +110,18 @@ Código memorizado
       * Asignación de aplicaciones de alta densidad para planes con varias aplicaciones de funciones
 
   * Plan Dedicado (App Service): Sus aplicaciones de funciones también pueden ejecutarse en las mismas máquinas virtuales dedicadas que otras aplicaciones de App Service (SKU básica, estándar, prémium y aislada).  
+    
     **Ventajas:**
       * Tiene máquinas virtuales infrautilizadas que ya ejecutan otras instancias de App Service.
       * Quiere proporcionar una imagen personalizada en la que ejecutar sus funciones.
 
 * ¿Por qué la memoization falla o no funciona de forma correcta?
+
+ * La memorización no funcionó correctamente debido a que después de un lapso de tiempo de no hacer ninguna petición en este caso cinco minutos esta memorización ya hecha se borro teniendo asi que volver a calcular la respuesta para el valor ingresado.
+
 * ¿Cómo funciona el sistema de facturación de las Function App?
+
+ * Ejecuciones: Functions se factura según el número total de ejecuciones solicitadas cada mes para todas las funciones. Las ejecuciones se cuentan cada vez que se ejecuta una función en respuesta a un evento, desencadenado por un enlace. El primer millón de ejecuciones es gratis cada mes.
+ * Consumo de recursos: Functions se factura según el consumo de recursos observado, medido en gigabytes por segundos (GB-s). El consumo de recursos observado se calcula multiplicando el tamaño medio de memoria en GB por el tiempo en milisegundos que dura la ejecución de la función. La memoria que una función utiliza se mide redondeando al alza a los 128 MB más cercanos hasta un tamaño de memoria máximo de 1.536 MB, y el tiempo de ejecución se redondea al alza a los 1 ms más cercanos. Para la ejecución de una única función, el tiempo de ejecución mínimo es de 100 ms y la memoria mínima es de 128 MB, respectivamente. Los precios de Functions incluyen una concesión gratuita al mes de 400.000 GB-segundos.
+
 * Informe
